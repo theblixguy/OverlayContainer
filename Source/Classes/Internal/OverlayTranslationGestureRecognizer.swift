@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OverlayTranslationGestureRecognizer: UIPanGestureRecognizer {
+public class OverlayTranslationGestureRecognizer: UIPanGestureRecognizer {
 
     weak var drivingScrollView: UIScrollView?
 
@@ -22,12 +22,12 @@ class OverlayTranslationGestureRecognizer: UIPanGestureRecognizer {
 
     // MARK: - UIGestureRecognizer
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
         startingLocation = location(in: view)
     }
 
-    override func shouldRequireFailure(of otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public override func shouldRequireFailure(of otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let gestures = drivingScrollView?.gestureRecognizers else {
             return super.shouldRequireFailure(of: otherGestureRecognizer)
         }

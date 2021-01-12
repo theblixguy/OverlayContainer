@@ -79,7 +79,7 @@ open class OverlayContainerViewController: UIViewController {
     /// The style of the container.
     public let style: OverlayStyle
 
-    private lazy var overlayPanGesture: OverlayTranslationGestureRecognizer = self.makePanGesture()
+    public lazy var overlayPanGesture: OverlayTranslationGestureRecognizer = self.makePanGesture()
     private lazy var overlayContainerView = OverlayContainerView()
     private lazy var overlayTranslationView = OverlayTranslationView()
     private lazy var overlayTranslationContainerView = OverlayTranslationContainerView()
